@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ticket.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">javaqamvn</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Ticket.java</span></div><h1>Ticket.java</h1><pre class="source lang-java linenums">public class Ticket implements Comparable&lt;Ticket&gt; {
+    public int getId() {
+<span class="nc" id="L3">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="nc" id="L7">        this.id = id;</span>
+<span class="nc" id="L8">    }</span>
+
+    public String getIATA_Depature() {
+<span class="fc" id="L11">        return IATA_Depature;</span>
+    }
+
+    public void setIATA_Depature(String IATA_Depature) {
+<span class="nc" id="L15">        this.IATA_Depature = IATA_Depature;</span>
+<span class="nc" id="L16">    }</span>
+
+    public String getIATA_Arrival() {
+<span class="fc" id="L19">        return IATA_Arrival;</span>
+    }
+
+    public void setIATA_Arrival(String IATA_Arrival) {
+<span class="nc" id="L23">        this.IATA_Arrival = IATA_Arrival;</span>
+<span class="nc" id="L24">    }</span>
+
+    public int getFlightTime() {
+<span class="nc" id="L27">        return flightTime;</span>
+    }
+
+    public void setFlightTime(int flightTime) {
+<span class="nc" id="L31">        this.flightTime = flightTime;</span>
+<span class="nc" id="L32">    }</span>
+
+    public int getPrice() {
+<span class="nc" id="L35">        return price;</span>
+    }
+
+    public void setPrice(int price) {
+<span class="nc" id="L39">        this.price = price;</span>
+<span class="nc" id="L40">    }</span>
+
+    protected int id;
+    protected int price;
+    protected String IATA_Depature;
+    protected String IATA_Arrival;
+    protected int flightTime;
+
+<span class="fc" id="L48">    public Ticket(int id, int price, String IATA_Depature, String IATA_Arrival, int flightTime) {</span>
+<span class="fc" id="L49">        this.id = id;</span>
+<span class="fc" id="L50">        this.price = price;</span>
+<span class="fc" id="L51">        this.IATA_Depature = IATA_Depature;</span>
+<span class="fc" id="L52">        this.IATA_Arrival = IATA_Arrival;</span>
+<span class="fc" id="L53">        this.flightTime = flightTime;</span>
+<span class="fc" id="L54">    }</span>
+
+    @Override
+    public int compareTo(Ticket o) {
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if (this.price &lt; o.price) {</span>
+<span class="fc" id="L59">            return -1;</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        } else if (this.price &gt; o.price) {</span>
+<span class="fc" id="L61">            return 1;</span>
+        } else {
+<span class="fc" id="L63">            return 0;</span>
+        }
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
